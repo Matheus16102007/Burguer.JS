@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header" id="header">
+        <nav>
+            <img src="./logo.jpg" alt="" class="logo">
+            <ul>
+                <li><a href="#" id="hotdog">Hot-Dog</a></li>
+                <li><a href="#" id="burguer">Hamburguer</a></li>
+                <li><a href="#" id="acompanhamentos">Acompanhamentos</a></li>
+                <li><a href="#" id="bebidas">Bebidas</a></li>
+            </ul>
+            <a href="#" class="btn">Faça seu pedido</a>
+        </nav>
+        <div class="info">
+            <div>
+                <h2 id="preco">R$12,00</h2>
+                <p>Simples</p>
+            </div>
+            <div>
+                <h2 id="duplo">R$15,00</h2>
+                <p>Duplo</p>
+            </div>
+            <div>
+                <h2 id="espera">15min</h2>
+                <p>Tempo de espera</p>
+            </div>
+            <div class="linha"></div>
+            <div>
+                <h2 id="botao">Peça e retire</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let header = document.getElementById('header')
+    let hot = document.getElementById('hotdog')
+    let ham = document.getElementById('burguer')
+    let fri = document.getElementById('acompanhamentos')
+    let beb = document.getElementById('bebidas')
+    let model = document.getElementById('botao')
+    let pre = document.getElementById('preco')
+    let dup = document.getElementById('duplo')
+    let esp = document.getElementById('espera')
+
+    hot.onclick = function(){
+        header.style.backgroundImage = "url(./hotdog.jpg)"
+        model.innerHTML = "Hot-Dog"
+        pre.innerHTML = "R$12,00"
+        dup.innerHTML = "R$15,00"
+        esp.innerHTML = "15min"
+    }
+    ham.onclick = function(){
+        header.style.backgroundImage = "url(./hamburguer.webp)"
+        model.innerHTML = "Hamburguer"
+        pre.innerHTML = "R$24,00"
+        dup.innerHTML = "R$28,00"
+        esp.innerHTML = "30min"
+    }
+    fri.onclick = function(){
+        header.style.backgroundImage = "url(./acompanhamento.jpg)"
+        model.innerHTML = "Acompanhamentos"
+        pre.innerHTML = "R$13,00"
+        dup.innerHTML = "R$17,00"
+        esp.innerHTML = "10min"
+    }
+    beb.onclick = function(){
+        header.style.backgroundImage = "url(./refri.jpg)"
+        model.innerHTML = "Bebidas"
+        pre.innerHTML = "R$8,00"
+        dup.innerHTML = "R$16,00"
+        esp.innerHTML = "5min"
+    }
+</script>
+
+</html>
